@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Engagement");
+body {
+  background: #dcdcdc;
+}
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 95vh;
+}
+.wrapper .upload_button:hover .upload_button__label {
+  transform: rotateX(90deg);
+  transition: ease-in-out 1s;
+  opacity: 0;
+}
+.wrapper .upload_button:hover .upload_button__icon {
+  transition: ease-in 1s;
+  opacity: 1;
+}
+.wrapper .upload_button:hover .upload_button__icon:active {
+  transition: ease-in-out 0.1s;
+  color: #f0f;
+}
+.wrapper .upload_button .upload_button__label {
+  font-family: 'Engagement', cursive;
+  font-size: 3rem;
+  transition: 1s ease-in-out 0.5s;
+}
+.wrapper .upload_button .upload_button__icon {
+  transform: translate(38%, -130%);
+  opacity: 0;
+  color: #00dc00;
+  font-size: 1.7rem;
+  transition: 1s ease-in-out 0.1s;
+}
+.wrapper .upload_button,
+.wrapper .upload_button label {
+  cursor: pointer;
+}
+input[type='file'] {
+  display: none;
+}

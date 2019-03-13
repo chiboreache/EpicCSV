@@ -1,0 +1,19 @@
+{% block head %}
+<head>
+  <script src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" defer="" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+  <link href="{{ url_for('static', filename='upload.css') }}" rel="stylesheet"/>
+  <link href="{{ url_for('static', filename='favicon.ico') }}" rel="shortcut icon"/>
+  <title>Upload CSV</title>
+</head>{% endblock %}{% block content %}
+<div class="wrapper">
+  <div class="upload_button">
+    <div class="upload_button__label">Upload</div>
+    <div class="upload_button__icon">
+      <form action="{{ url_for('upload.table') }}" method="post" enctype="multipart/form-data">
+        <label><i class="fas fa-cloud-upload-alt"></i>
+          <input type="file" name="file" onchange="form.submit()"/>
+        </label>
+      </form>
+    </div>
+  </div>
+</div>{% endblock %}

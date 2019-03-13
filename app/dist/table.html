@@ -1,0 +1,24 @@
+{% block head %}
+<head>
+  <link href="{{ url_for('static', filename='table.css') }}" rel="stylesheet"/>
+  <link href="{{ url_for('static', filename='favicon.ico') }}" rel="shortcut icon"/>
+  <title>Pandas Table</title>
+</head>{% endblock %}{% block content %}
+<div class="grid">
+  <div class="table">{{ table|safe }}
+
+  </div>
+  <div class="donation">
+    <div class="article">Was helpful?</div>
+    <div class="article-background"></div>
+    <div class="paypal-button">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input name="cmd" type="hidden" value="_donations"/>
+        <input name="business" type="hidden" value="EUGC69HWGJ3QA"/>
+        <input name="item_name" type="hidden" value="Epic Marketplace CSV data renderer"/>
+        <input name="currency_code" type="hidden" value="USD"/>
+        <input name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" type="image" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" border="0"/><img src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="" border="0" width="1" height="1"/>
+      </form>
+    </div>
+  </div>
+</div>{% endblock %}

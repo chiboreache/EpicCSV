@@ -1,0 +1,87 @@
+hwpx(w,h=w)
+  height ((h)px)
+  width ((w)px)
+hw(w,h=w)
+  height ((h)%)
+  width ((w)%)
+hwv(h,w=h)
+  height (h)vh
+  width (w)vw
+
+
+he(h)
+  height (h)em
+we(w)
+  width (w)em
+hr(h)
+  height (h)rem
+wr(w)
+  width (w)rem
+
+
+mm(min, max=1)
+  minmax((min)em, (max)fr)
+
+
+gci()
+  display grid
+  place-items center
+gcc()
+  display grid
+  place-content: center
+gcs()
+  display grid
+  place-self center
+
+ac()
+  align-content center
+  justify-items center
+
+
+
+ddd()
+  transform-style preserve-3d
+d3()
+  transform-style preserve-3d
+
+
+
+rdup(x=0,y=0,z=0)
+  transform translate3d((x)%,(y)%,(z)em)
+
+rdu(x=0,y=0,z=0)
+  transform translate3d(x, y, z)
+
+
+right(x)
+  transform translateX(x)
+down(y)
+  transform translateY(y)
+up(z)
+  transform translateZ(z)
+
+rd(x=0,y=0)
+  transform translate(x, y)
+rdem(x=0,y=0)
+  transform translate((x)em, (y)em)
+
+tl(x=0,y=0)
+  top x
+  left y
+
+rotx(x=0)
+  transform rotateX((x)deg)
+roty(y=0)
+  transform rotateY((y)deg)
+rotz(z=0)
+  transform rotateZ((z)deg)
+
+
+pitch(x)
+  transform rotateX((x)turn)
+yaw(y)
+  transform rotateY((y)turn)
+roll(z)
+  transform rotateZ((z)turn)
+
+// transform: skew(30deg, 20deg);

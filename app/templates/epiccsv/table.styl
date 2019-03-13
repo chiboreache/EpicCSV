@@ -1,0 +1,94 @@
+@import mixins
+@import url('https://fonts.googleapis.com/css?family=PT+Serif')
+@import url('https://fonts.googleapis.com/css?family=Lora700')
+@import url('https://fonts.googleapis.com/css?family=Marck+Script')
+
+html
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif
+  font-size: 16px
+  word-spacing: 1px
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+
+body
+  background gainsboro
+::selection
+  background-color: #C3CFE2
+*
+*:before
+*:after
+  padding 0
+  margin 0
+  box-sizing: border-box
+.grid
+  gci()
+  padding-top 10%
+  overflow-x hidden
+  table
+    right(-1.5em)
+    tbody
+      tr:nth-child(2n)
+        background lightgray
+    td
+      font-size 1rem
+      font-family 'PT Serif', serif
+      text-align center
+      text-align right
+    th
+      font-family 'Lora', serif
+      padding 0.5em 1.3em
+      transform: translate(1.4em)
+    &
+    tr
+    th
+    td
+      border-collapse collapse
+      border none
+  .donation
+    position relative
+    margin 6% 0 10% 0
+    right(1.9em)
+    &:hover
+      .article
+      .article-background
+        animation fill-and-hide 2.5s ease-in forwards
+      .paypal-button
+        transition 1s all 2.5s
+        z-index 33
+    .article
+      font-family "Marck Script", "Adobe Blank"
+      font-size 1.8em
+      padding 1.1em
+      background left / 500% linear-gradient(
+                                  to left,
+                                  black 50%,
+                                  silver 50%
+                                )
+      color transparent
+      background-clip text
+      -webkit-background-clip: text
+    .article-background
+      hw(100)
+      background gainsboro
+      opacity 1
+      position absolute
+      z-index -22
+      tl(,)
+    .paypal-button
+      rdem(2, -4)
+      position absolute
+      z-index -33
+@keyframes fill-and-hide
+  0%
+    background-position: 0
+  60%
+    background-position: -50%
+  75%
+    background-position: -50%
+    rotx()
+  100%
+    rotx(90)

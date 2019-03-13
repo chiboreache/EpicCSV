@@ -1,0 +1,36 @@
+@import mixins
+@import url('https://fonts.googleapis.com/css?family=Engagement')
+
+
+body
+  background gainsboro
+.wrapper
+  gci()
+  height 95vh
+  .upload_button
+    &:hover
+      .upload_button__label
+        rotx(90)
+        transition ease-in-out 1s
+        opacity 0
+      .upload_button__icon
+        transition ease-in 1s
+        opacity 1
+        &:active
+          transition ease-in-out 0.1s
+          color #f0f
+    .upload_button__label
+      font-family 'Engagement', cursive
+      font-size 3rem
+      transition 1s ease-in-out 0.5s
+    .upload_button__icon
+      rd(38%, -130%)
+      opacity 0
+      color rgb(0, 220, 0)
+      font-size 1.7rem
+      transition 1s ease-in-out 0.1s
+    &
+    label
+      cursor pointer
+input[type='file']
+  display none
