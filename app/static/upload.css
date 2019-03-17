@@ -26,7 +26,7 @@ body {
   transition: 1s ease-in-out 0.5s;
 }
 .wrapper .upload_button .upload_button__icon {
-  transform: translate(38%, -130%);
+  transform: translate(38%, -150%);
   opacity: 0;
   color: #00dc00;
   font-size: 1.7rem;

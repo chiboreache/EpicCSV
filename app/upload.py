@@ -23,7 +23,7 @@ def table():
     if request.method == 'POST':
         file = request.files['file']
         draw_table = pandas_processing(file)
-        firebase_push('actual', get_last_upload())
+        firebase_push('real', 'uploads')
         return render_template('table.html',
                                 table=draw_table,
                                )
@@ -33,7 +33,7 @@ def table():
 def table_dummy():
     file = 'app/static/dummy.csv'
     draw_table = pandas_processing(file)
-    firebase_push('dummy', get_last_upload())
+    firebase_push('dummy', 'dummy-uploads')
     return render_template('table.html',
                             table=draw_table,
                            )
